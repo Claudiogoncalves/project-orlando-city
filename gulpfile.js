@@ -42,7 +42,7 @@ gulp.task('buildjs', function() {
 gulp.task('move-fonts', function() {
     return gulp.src('./source/components/components-font-awesome/fonts/**')
         .pipe(gulp.dest('./dist/fonts'));
-})
+});
 
 //movendo arquivos js para pasta dist
 gulp.task('aquaman', function() {
@@ -57,4 +57,4 @@ gulp.task('demolidor', function() {
 });
 
 //startando todas as tarefas so com o comando gulp
-gulp.task('default',['buildjs','serve','thor','aquaman','demolidor']);
+gulp.task('default',['buildjs','move-fonts','serve','thor','aquaman','demolidor']);

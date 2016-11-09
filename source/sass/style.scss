@@ -1,0 +1,67 @@
+@import "../components/bootstrap/scss/bootstrap";
+@import "../components/components-font-awesome/scss/font-awesome.scss";
+
+.offcanvas {
+	width: 80%;
+	max-width: 320px;
+	height: 100%;
+	//position: fixed;
+	left: 0%;
+	top: 0;
+	background-color: #ffffff;	
+	.heading-logo img {			
+		display: block;
+		margin-left: 6rem;		
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		width: 30%;
+	}
+
+	.offcanvas{
+		.heading-img {
+			@extend .img-fluid;
+		}
+	}
+	
+
+	.heading-list {		
+		display: block;
+		margin-right: 2rem;
+		
+	}
+	.heading-list li {
+		display: block;
+		text-decoration: none;
+		text-align: center;		
+		padding-top: 35px;		
+		border-top: 1px solid #cccccc;
+		margin-left: 0;
+
+	}
+	.heading-list a {		
+		display: block;
+		padding-bottom: 20px;
+		color: #6c4098;
+	}
+	.list {
+		border-bottom: 1px solid #cccccc;
+	}
+	
+	.heading-footer {
+		background-color: #633492;		
+	}
+	.heading-footer i {
+		display: block;
+		color: #fff;
+		margin-left: .5rem;
+		padding-top: 6px;
+
+	}
+	.heading-footer .fa {
+		display: block;
+		margin-top: 50px;
+		height: 2rem;
+		
+	}
+
+}
