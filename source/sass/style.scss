@@ -1,14 +1,16 @@
 @import "../components/bootstrap/scss/bootstrap";
 @import "../components/components-font-awesome/scss/font-awesome.scss";
+@import "header";
 
 .offcanvas {
-	width: 80%;
-	max-width: 320px;
+	width: 80%;	
 	height: 100%;
-	//position: fixed;
-	left: 0%;
+	position: fixed;
+	left: -80%;
 	top: 0;
-	background-color: #ffffff;	
+	background-color: #ffffff;
+	@include transition(left .2s);
+	z-index: 2;
 	.heading-logo img {			
 		display: block;
 		margin-left: 6rem;		
@@ -55,13 +57,28 @@
 		color: #fff;
 		margin-left: .5rem;
 		padding-top: 6px;
-
 	}
 	.heading-footer .fa {
 		display: block;
 		margin-top: 50px;
-		height: 2rem;
-		
+		height: 2rem;		
 	}
 
 }
+
+.open-offcanvas { 
+	&:after {
+		content:"";
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,.4);
+	}
+	.offcanvas {
+		left: 0;
+	}
+}
+
+
